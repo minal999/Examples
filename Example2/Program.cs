@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,7 +32,7 @@ namespace Example2
                 Console.WriteLine($"\n{c.Id} {c.Name}  {c.Fees}");
                 foreach(Student s in c.students)
                 {
-                    Console.WriteLine($"t{s.StudName}  {s.City}");
+                    Console.WriteLine($"\t{s.StudName}  {s.City}");
                 }
             }
         }

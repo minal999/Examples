@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,22 +10,22 @@ namespace Example4
     {
         static void Main(string[] args)
         {
-            ArrayList emp1=new ArrayList();
-            emp1.Add(new Employee(1,"Rahul", "Pune"));
-            emp1.Add(new Employee(2,"Rohan", "Mumbai"));
+            ArrayList emp1 = new ArrayList();
+            emp1.Add(new Employee { Id = 1, Name = "Rahul", City = "Pune" });
+            emp1.Add(new Employee { Id = 2, Name = "Rohan", City = "Mumbai" });
             ArrayList emp2 = new ArrayList();
-            emp2.Add(new Employee(3, "Rahul", "Pune"));
-            emp2.Add(new Employee(4, "Rohan", "Mumbai"));
-            emp2.Add(new Employee(5,"Kishor", "Nagpur"));
-            ArrayList emp3 = new ArrayList();
-            emp3.Add(new Employee(6,"Dipali", "Pune"));
-            emp3.Add(new Employee(7, "Minal", "Mumbai"));
-            emp3.Add(new Employee(8, "Ashwini", "Nagpur"));
-
+            emp2.Add(new Employee { Id = 3, Name = "Rahul", City = "Pune" });
+            emp2.Add(new Employee { Id = 4, Name = "Rohan", City = "Mumbai" });
+            emp2.Add(new Employee { Id = 5, Name = "Kishor", City = "Nagpur" });
+            ArrayList emp3 = new ArrayList() {
+            new Employee { Id = 6, Name = "Dipali", City = "Pune" },
+            new Employee { Id = 7, Name = "Minal", City = "Mumbai" },
+            new Employee { Id = 8, Name = "Ashwini", City = "Nagpur" }
+        };
             ArrayList dept1 = new ArrayList();
-            dept1.Add(new Department(1, "Tester", 25000, emp1));
-            dept1.Add(new Department(2, "Manager", 50000, emp2));
-            dept1.Add(new Department(3, "Developer", 45000, emp3));
+            dept1.Add(new Department { Id = 1, Name = "Tester", Salary = 25000, employees = emp1 });
+            dept1.Add(new Department { Id = 2, Name = "Manager", Salary = 50000, employees = emp2 });
+            dept1.Add(new Department { Id = 3, Name = "Developer", Salary = 45000, employees = emp3 });
 
             foreach (Department d in dept1)
             {
