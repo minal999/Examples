@@ -28,7 +28,7 @@ namespace Generic
 
             Console.WriteLine($"count is {list1.Count()}");
             Console.WriteLine($"Capacity is {list1.Capacity}");
-            //list2.CopyTo(list1,2);
+            //list2.CopyTo(list1, 2);
             //List<Product> list3 = new List<Product>();
             //list3.Add(new Product { Id = 1, Name = "Laptop", Price = 25000 });
             // or
@@ -39,7 +39,10 @@ namespace Generic
             //    new Product { Id = 2, Name = "Laptop", Price = 25000 },
             //    new Product { Id = 3, Name = "Laptop", Price = 25000 },
             //};
-            //foreach(Product p in products)
+            //products.Add(new Product{Id=4,Name="Phone",Price=50000 });
+            //Console.WriteLine($"Capacity is {products.Capacity}");
+            //Console.WriteLine($"Count is {products.Count}");
+            //foreach (Product p in products)
             //{
             //    Console.WriteLine($"{p.Id} {p.Name} {p.Price}");
             //}
