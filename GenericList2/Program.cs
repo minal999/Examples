@@ -114,10 +114,10 @@ namespace GenericList2
                 Console.WriteLine(at.Name);
                 foreach(Account a in at.accounts)
                 {
-                    Console.WriteLine($"\t{a.AccName}");
+                    Console.WriteLine($"\n\t{a.AccName}");
                         foreach(Customer c in a.customers)
                         {
-                            Console.WriteLine($"\t\t{c.CustName}");
+                            Console.WriteLine($"\n\t\t{c.CustName}");
                             foreach(Loan l in c.loans)
                             {
                                 Console.WriteLine($"\t\t\t{l.LoanName}");
