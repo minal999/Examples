@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generic", "Generic\Generic.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericHW", "GenericHW\GenericHW.csproj", "{D8989B32-7A58-4057-990F-EF6B0239DE71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericLisrEx", "GenericLisrEx\GenericLisrEx.csproj", "{5A2D05FF-1B2A-476F-907D-F2428E8550D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericListEx", "GenericLisrEx\GenericListEx.csproj", "{5A2D05FF-1B2A-476F-907D-F2428E8550D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
