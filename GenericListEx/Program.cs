@@ -37,7 +37,7 @@ namespace GenericListEx
                     new Employee{EmpId=1,Name="Pooja",City="Pune",Gender="Female"},
                     new Employee{EmpId=2,Name="Laila",City="Delhi",Gender="Female"},
                     new Employee{EmpId=3,Name="Yash",City="Mumbai",Gender="Male"}
-                     } 
+                    }
                 },
                 new Department
                 {
