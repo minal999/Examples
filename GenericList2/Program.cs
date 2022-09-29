@@ -16,16 +16,10 @@ namespace GenericList2
         public List<Loan> loans = new List<Loan>();
     }
 
-    public class Account
-    {
-        public string AccName { get; set; }
-        public List<Customer> customers = new List<Customer>();
-    }
-
     public class AccountType
     {
         public string Name { get; set; }
-        public List<Account> accounts = new List<Account>();
+        public List<Customer> customers = new List<Customer>();
     }
 
     internal class Program
@@ -36,10 +30,7 @@ namespace GenericList2
             {
                 new AccountType
                 {
-                    Name="AccountTypes",accounts ={
-                    new Account
-                    {
-                        AccName = "Savings",
+                        Name = "Savings",
                         customers =
                         {
                             new Customer
@@ -70,23 +61,24 @@ namespace GenericList2
                             }
                         }
                     },
-                        new Account
-                        {
-                            AccName="Current",
+                new AccountType
+                {
+                    Name="Current",
                             customers =
                             {
                                 new Customer
                                 {
                                     CustName="Customer1",loans=
                                     {
-                                        new Loan{LoanName="Car Loan"}
+                                        new Loan{LoanName="Car Loan"},
+                                        new Loan{LoanName="Gold Loan"}
                                     }
                                 },
                                 new Customer
                                 {
                                     CustName="Customer2",loans=
                                     {
-                                        new Loan{LoanName="Home Loan"},
+                                        new Loan{LoanName="Education Loan"},
                                         new Loan{LoanName="Personal Loan"}
                                     }
                                 },
@@ -99,28 +91,37 @@ namespace GenericList2
                                 },
                                 new Customer
                                 {
-                                    CustName="Customer4",loans=
+                                    CustName = "Customer4",
+                                    loans =
                                     {
-                                        new Loan{LoanName="No Loan"}
+                                        new Loan{LoanName=""}
+                                    }
+                                    
+                                },
+                                new Customer
+                                {
+                                    CustName="Customer5",loans=
+                                    {
+                                        new Loan{LoanName="Home Loan"}
                                     }
                                 }
                             }
                         }
-                    }
-                }
-            };
+                    };
+    
             foreach(AccountType at in type1)
             {
                 Console.WriteLine(at.Name);
-                foreach(Account a in at.accounts)
-                {
-                    Console.WriteLine($"\n\t{a.AccName}");
-                        foreach(Customer c in a.customers)
+                        foreach(Customer c in at.customers)
                         {
                             Console.WriteLine($"\n\t\t{c.CustName}");
                             foreach(Loan l in c.loans)
                             {
                                 Console.WriteLine($"\t\t\t{l.LoanName}");
+                                if(l.LoanName==String.Empty)
+                        {
+                            Console.WriteLine("\t\t\tNo Loan");
+                        }
                             }
                         }
                 }
@@ -128,4 +129,4 @@ namespace GenericList2
 
         }
     }
-}
+
